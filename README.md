@@ -45,52 +45,22 @@ The Array Architecture of the n-bit input data stream for the BCH Generator Poly
 
 The Code-Banking and various NAND Flash Memory Support The architecture for the Code-banking was shown in Figure 4. 
 
-The Boot ROM was the Masked Read Only
-Memory which stored the Boot codes for the Microcontroller
-in Booting. By the Code-Banking architecture, the
-whole system firmware can be separated by several banks,
-Bank Code #0, 1, …, n. The Banked Codes will be executed
-Bank by Bank when loaded by the Code Loader to the Bank
-RAM. The System Firmware of the micro-controller can be
-upgraded from the Host side.
-To support the various kinds of the NAND Flash
-memory in a controller, a specified Flash Parameters was
-created to record some system operated parameters of the
-NAND Flash memory. The Table was started by a Start-Tag,
-and ended by an End-of-Table Flag. The useful parameters
-such as: Total Capacity, Total Physical Blocks, Pages per
-Block, etc. With the Code-Banking architecture and the
-Specified Flash memory parameters, the various kinds of
-NAND Flash memory can be supported in the same controller chip and be accessed in an optimal way
-respectively.
+The Boot ROM was the Masked Read Only Memory which stored the Boot codes for the Microcontroller in Booting. By the Code-Banking architecture, the whole system firmware can be separated by several banks, Bank Code #0, 1, …, n. The Banked Codes will be executed Bank by Bank when loaded by the Code Loader to the Bank RAM. The System Firmware of the micro-controller can be upgraded from the Host side.
+
+To support the various kinds of the NAND Flash memory in a controller, a specified Flash Parameters was created to record some system operated parameters of the NAND Flash memory. The Table was started by a Start-Tag, and ended by an End-of-Table Flag. The useful parameters such as: Total Capacity, Total Physical Blocks, Pages per Block, etc. With the Code-Banking architecture and the Specified Flash memory parameters, the various kinds of NAND Flash memory can be supported in the same controller chip and be accessed in an optimal way respectively.
+
+
 ![WhatsApp Image 2023-03-17 at 10 16 30](https://user-images.githubusercontent.com/127031157/225815069-78df4f01-f62f-4876-82c8-48cb25ccefb3.jpg)
-THE DEFECT MANAGEMENT AND WEARLEVELING ALGORITHMS
-Since the density progressing of the NAND Flash
-memory, the closer the bit lines and the denser of the bit cells
-caused some of the Flash memory blocks defected. The
-defected Flash memory block which cannot be used or
-accessed by the Controller is called the Defected Block, or
-Bad Block. To increase the yield of the Flash memory, the
-Defect Management in the NAND Flash Controller was
-necessary. In general, the Defect Management was handled
-by the designed sub-routines of the system firmware. In
-Figure 5, a typical defect management method was shown.
-The Defected Blocks which cannot be accessed was replaced
-by some reserved good blocks via a Table, called the Defect
-Management Table. When in the production stage, the
-original defected Blocks will be scanned and replaced by the
-reserved good blocks. Through the replacement of the
-original defected blocks, the flash memory become useful
-even if it contains defected blocks. This process for defect
-scanning and replacement in the production stage is so called
-the Static Defect Management. When the flash memory
-being used in the usage stage, there is still the probability to
-meet some normal blocks become defected. This
-phenomenon usually happened in the Programming or
-Erasing process, which can be identified by the Failure report
-from the NAND Flash memory, or it can be checked by read
-data back and compare after the user data page programmed.
-The defected blocks detected during the normal operation
-need to be managed as well. Since the defect management
-was processed during the normal operation in usage phase,
-the method is so called the Dynamical Defect Management.
+
+
+## The Defect Management And Wearleveling Algorithms
+
+Since the density progressing of the NAND Flash memory, the closer the bit lines and the denser of the bit cells caused some of the Flash memory blocks defected. The defected Flash memory block which cannot be used or accessed by the Controller is called the Defected Block, or Bad Block. To increase the yield of the Flash memory, the Defect Management in the NAND Flash Controller was necessary. 
+
+In general, the Defect Management was handled by the designed sub-routines of the system firmware. In Figure 5, a typical defect management method was shown.
+
+The Defected Blocks which cannot be accessed was replaced by some reserved good blocks via a Table, called the Defect Management Table. When in the production stage, the original defected Blocks will be scanned and replaced by the reserved good blocks. Through the replacement of the original defected blocks, the flash memory become useful even if it contains defected blocks. This process for defect scanning and replacement in the production stage is so called the Static Defect Management. 
+
+When the flash memory being used in the usage stage, there is still the probability to meet some normal blocks become defected. This phenomenon usually happened in the Programming or Erasing process, which can be identified by the Failure reportfrom the NAND Flash memory, or it can be checked by read data back and compare after the user data page programmed.
+
+The defected blocks detected during the normal operation need to be managed as well. Since the defect management was processed during the normal operation in usage phase, the method is so called the Dynamical Defect Management.
