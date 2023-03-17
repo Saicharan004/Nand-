@@ -63,3 +63,36 @@ The t-EC BCH ECC Code Construction
 A t-EC BCH ECC code can be constructed through the
 procedures shown in Figure 2.
 ![WhatsApp Image 2023-03-16 at 15 42 22](https://user-images.githubusercontent.com/127031157/225585582-3a7613a7-2dd4-4c06-a8ff-7bb01dafddcb.jpg)
+Based on the general basic equation of a t-EC w-bit
+parallel BCH code, the basic operation module for the
+matrix array can be constructed by two AND gates and two
+XOR gates. The coefficients ai’s are determined by the
+Generator Polynomial or the Syndrome Generator
+Polynomials of the BCH code. To complete the matrix
+equation (4) by the basic operation module, an Array
+Architecture is adopted. The Array Architecture of the n-bit
+input data stream for the BCH Generator Polynomial or
+Syndrome Generator Polynomials is shown as in Figure 3.
+![WhatsApp Image 2023-03-17 at 10 10 56](https://user-images.githubusercontent.com/127031157/225814658-0ddd23b0-cbe3-42b3-9994-d6682f69a035.jpg)
+The Code-Banking and various NAND Flash Memory Support
+The architecture for the Code-banking was shown in
+Figure 4. The Boot ROM was the Masked Read Only
+Memory which stored the Boot codes for the Microcontroller
+in Booting. By the Code-Banking architecture, the
+whole system firmware can be separated by several banks,
+Bank Code #0, 1, …, n. The Banked Codes will be executed
+Bank by Bank when loaded by the Code Loader to the Bank
+RAM. The System Firmware of the micro-controller can be
+upgraded from the Host side.
+To support the various kinds of the NAND Flash
+memory in a controller, a specified Flash Parameters was
+created to record some system operated parameters of the
+NAND Flash memory. The Table was started by a Start-Tag,
+and ended by an End-of-Table Flag. The useful parameters
+such as: Total Capacity, Total Physical Blocks, Pages per
+Block, etc. With the Code-Banking architecture and the
+Specified Flash memory parameters, the various kinds of
+NAND Flash memory can be supported in the same controller chip and be accessed in an optimal way
+respectively.
+![WhatsApp Image 2023-03-17 at 10 16 30](https://user-images.githubusercontent.com/127031157/225815069-78df4f01-f62f-4876-82c8-48cb25ccefb3.jpg)
+THE DEFECT MANAGEMENT AND WEARLEVELING ALGORITHMS
