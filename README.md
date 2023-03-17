@@ -30,6 +30,8 @@ The Defect Management Algorithm can increase the yield of the Flash memory and p
 ![WhatsApp Image 2023-03-16 at 14 22 30](https://user-images.githubusercontent.com/127031157/225585123-35fd0a27-6540-4b58-9e9a-1f108aa87d8c.jpg)
 
 The t-EC BCH ECC Code Construction A t-EC BCH ECC code can be constructed through the procedures shown in Figure 2.
+
+
 ![WhatsApp Image 2023-03-16 at 15 42 22](https://user-images.githubusercontent.com/127031157/225585582-3a7613a7-2dd4-4c06-a8ff-7bb01dafddcb.jpg)
 
 
@@ -37,6 +39,8 @@ Based on the general basic equation of a t-EC w-bit parallel BCH code, the basic
 XOR gates. The coefficients ai’s are determined by the Generator Polynomial or the Syndrome Generator Polynomials of the BCH code. To complete the matrix equation (4) by the basic operation module, an Array Architecture is adopted. 
 
 The Array Architecture of the n-bit input data stream for the BCH Generator Polynomial or Syndrome Generator Polynomials is shown as in Figure 3.
+
+
 ![WhatsApp Image 2023-03-17 at 10 10 56](https://user-images.githubusercontent.com/127031157/225814658-0ddd23b0-cbe3-42b3-9994-d6682f69a035.jpg)
 
 The Code-Banking and various NAND Flash Memory Support The architecture for the Code-banking was shown in Figure 4. 
