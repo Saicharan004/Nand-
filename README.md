@@ -1,10 +1,10 @@
 # Nand-Flash-Memory
 
-## Introduction
 As a semiconductor memory device capable of nonvolatile data storage even after removing the power supply, NAND flash has gained popularity in a variety of applications, like removable memory cards for portable devices, MP3 players, digital still cameras, and mobile handsets. The emerging multi-media applications demand for higher density and lower cost/MB, and drive the continuous process technology shrink and the MLC (multi level cell) technology adoption. Nevertheless, the narrower line pitch due to process technology shrink may induce severer cross interference between memory cells. No matter the requirement for multiple energy states also leaves MLC technology with a lower margin of error to read the bits.
 
-Since the NAND flash is operated through page (e.g. 2 Kbytes) programming and block (e.g. 128 Kbytes) erasing to satisfy the fast data transfer rate for mass data storage, an intrinsic random bit error makes the whole block be marked as “bad” and can no longer be utilized. Once the number of bad blocks exceeds a certain value that the controller chip can manage, the NAND flash chip is declared fail. 
+## Abstract
 
+Since the NAND flash is operated through page (e.g. 2 Kbytes) programming and block (e.g. 128 Kbytes) erasing to satisfy the fast data transfer rate for mass data storage, an intrinsic random bit error makes the whole block be marked as “bad” and can no longer be utilized. Once the number of bad blocks exceeds a certain value that the controller chip can manage, the NAND flash chip is declared fail. 
 
 ## Functionalities of a NAND Controller
 
@@ -18,10 +18,10 @@ systematic design approach of a Systolic Array Processor can make the circuit de
 ## The Controller Architecture
 The functional block diagram of the NAND Flash Controller was shown in Figure 1. The major functions of the Controller can be divided as: 
 
-1. the t-EC w-bit Parallel BCH ECC Circuit
-2. the Code-Banking structure and Firmware In- System Programmable (ISP), 
-3. the Defect Management and Wear-leveling Algorithm, and 
-4. the Dual Channel and Multi- Buffering mechanism. 
+1. The t-EC w-bit Parallel BCH ECC Circuit,
+2. The Code-Banking structure and Firmware In- System Programmable (ISP), 
+3. The Defect Management and Wear-leveling Algorithm, and 
+4. The Dual Channel and Multi- Buffering mechanism. 
 
 The ECC Circuit was designed here to enhance the data integrity and reliability of the data stored in the Flash memory. The Code-banking structure for the Micro-controller complying with firmware ISP function can provide the firmware upgrade to support various kind of Flash memory. 
 
@@ -33,20 +33,15 @@ The t-EC BCH ECC Code Construction A t-EC BCH ECC code can be constructed throug
 ![WhatsApp Image 2023-03-16 at 15 42 22](https://user-images.githubusercontent.com/127031157/225585582-3a7613a7-2dd4-4c06-a8ff-7bb01dafddcb.jpg)
 
 
-Based on the general basic equation of a t-EC w-bit
-parallel BCH code, the basic operation module for the
-matrix array can be constructed by two AND gates and two
-XOR gates. The coefficients ai’s are determined by the
-Generator Polynomial or the Syndrome Generator
-Polynomials of the BCH code. To complete the matrix
-equation (4) by the basic operation module, an Array
-Architecture is adopted. The Array Architecture of the n-bit
-input data stream for the BCH Generator Polynomial or
-Syndrome Generator Polynomials is shown as in Figure 3.
+Based on the general basic equation of a t-EC w-bit parallel BCH code, the basic operation module for the matrix array can be constructed by two AND gates and two
+XOR gates. The coefficients ai’s are determined by the Generator Polynomial or the Syndrome Generator Polynomials of the BCH code. To complete the matrix equation (4) by the basic operation module, an Array Architecture is adopted. 
+
+The Array Architecture of the n-bit input data stream for the BCH Generator Polynomial or Syndrome Generator Polynomials is shown as in Figure 3.
 ![WhatsApp Image 2023-03-17 at 10 10 56](https://user-images.githubusercontent.com/127031157/225814658-0ddd23b0-cbe3-42b3-9994-d6682f69a035.jpg)
-The Code-Banking and various NAND Flash Memory Support
-The architecture for the Code-banking was shown in
-Figure 4. The Boot ROM was the Masked Read Only
+
+The Code-Banking and various NAND Flash Memory Support The architecture for the Code-banking was shown in Figure 4. 
+
+The Boot ROM was the Masked Read Only
 Memory which stored the Boot codes for the Microcontroller
 in Booting. By the Code-Banking architecture, the
 whole system firmware can be separated by several banks,
