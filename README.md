@@ -64,3 +64,39 @@ The Defected Blocks which cannot be accessed was replaced by some reserved good 
 When the flash memory being used in the usage stage, there is still the probability to meet some normal blocks become defected. This phenomenon usually happened in the Programming or Erasing process, which can be identified by the Failure reportfrom the NAND Flash memory, or it can be checked by read data back and compare after the user data page programmed.
 
 The defected blocks detected during the normal operation need to be managed as well. Since the defect management was processed during the normal operation in usage phase, the method is so called the Dynamical Defect Management.
+
+![IMG_20230320_170539](https://user-images.githubusercontent.com/127031157/226328180-6932ce52-0693-4f9c-8a75-e6b4430a6441.jpg)
+Since the NAND Flash memory device only has the 
+limited erase or program cycles, it could be worn out during 
+some time of data accessing. To increase the product life 
+time, a Wear-leveling algorithm was implemented by the 
+subroutines in the system firmware. The Wear-Leveling 
+Algorithm was created by the turn-around of all the Flash 
+Blocks. The erase cycles of each block in the Flash memory, 
+therefore, could be averaged through the Wear-Leveling Algorithm 
+## The Chip Implementation 
+The functional block diagram of the designed NAND 
+Flash Controller for SD/MMC memory card was discussed 
+in Section II, Figure 1. With the chip architecture designed, 
+the circuit of the chip was designed and implemented to the 
+UMC 0.18 um CMOS Process. The chip micrograph of the 
+designed NAND Flash controller is shown in Figure 6.
+![IMG_20230320_170900](https://user-images.githubusercontent.com/127031157/226328812-3b382388-4c65-489a-a359-6b273a3012d9.jpg)
+## The Experiment And Test Results 
+The System performance of the designed NAND 
+Controller was evaluated by the certified platform of 
+MMCA (http://www.mmca.org) and SDA 
+(http://www.sdcard.org), the test platform was provided by 
+Testmetrix, Inc. (http://www.testmetrix.com). The Summary 
+of the System Performance of designed Controller is shown in Table 1
+![IMG_20230320_171213](https://user-images.githubusercontent.com/127031157/226329504-25f791af-862e-43c3-a1de-5b236d9903c0.jpg)
+## Conclusion 
+A NAND Flash memory controller for SD/MMC 
+memory card was presented. The t-EC w-bit Parallel BCH 
+ECC by using Systolic Array was presented and it can be 
+easily applied to a general t-EC w-bit parallel BCH ECC 
+circuit application. The Code-Banking and ISP capability 
+was presented and discussed for supporting the various kinds 
+of the NAND Flash memory. The real chip realization and 
+the test results by experiment show the good performances of 
+the controller chip.
