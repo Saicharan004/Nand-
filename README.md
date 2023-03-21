@@ -357,12 +357,10 @@ and physical synthesis.
 ## References:
 1. https://www.circuitbasics.com/basics-of-the-spi-communication-protocol/
 2. https://focuslcds.com/serial-vs-parallel/
-3. http://www.elecdude.com/2013/10/spi-verilog-code-master-slave-code-w
-ith.html
+3. http://www.elecdude.com/2013/10/spi-verilog-code-master-slave-code-with.html
 4. https://semiengineering.com/knowledge_centers/eda-design/definitions/
 register-transfer-level/
-5. http://aboutme.samexent.com/classes/spring09/ee5327/Synlab7_S09.p
-df
+5. http://aboutme.samexent.com/classes/spring09/ee5327/Synlab7_S09.pdf
 6. https://en.wikipedia.org/wiki/Physical_design_(electronics)
 7. https://chipedge.com/what-is-clock-tree-synthesis
 
