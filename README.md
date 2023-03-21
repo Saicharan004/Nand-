@@ -359,19 +359,10 @@ and physical synthesis.
 2. https://focuslcds.com/serial-vs-parallel/
 3. http://www.elecdude.com/2013/10/spi-verilog-code-master-slave-code-w
 ith.html
-4. https://www.design-reuse.com/articles/16039/developing-a-reusable-ipplatform-
-within-a-system-on-chip-design-framework-targeted-towards-a
-n-academic-r-d-environment.html
-5. https://semiengineering.com/knowledge_centers/eda-design/definitions/
+4. https://semiengineering.com/knowledge_centers/eda-design/definitions/
 register-transfer-level/
-6. https://digitalsystemdesign.in/genus-synthesis-using-scripts/#:~:text=an
-d%20genus_script_dft.tcl-,genus_script.,TOP%20Module%20which%20
-is%20IIR_LPF_direct1.
-7. http://aboutme.samexent.com/classes/spring09/ee5327/Synlab7_S09.p
+5. http://aboutme.samexent.com/classes/spring09/ee5327/Synlab7_S09.p
 df
-8. https://en.wikipedia.org/wiki/Physical_design_(electronics)
-9. https://sbmicro.org.br/sforum-eventos/sforum2019/A%201%20GHz%20
-64%20b%20Serial%20Peripheral%20Interface%20for%2040%20nm%2
-0Bulk%20CMOS%20Technology.pdf
-10. https://chipedge.com/what-is-clock-tree-synthesis
+6. https://en.wikipedia.org/wiki/Physical_design_(electronics)
+7. https://chipedge.com/what-is-clock-tree-synthesis
 
