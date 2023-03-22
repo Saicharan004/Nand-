@@ -362,4 +362,9 @@ and physical synthesis.
 5. http://aboutme.samexent.com/classes/spring09/ee5327/Synlab7_S09.pdf
 6. https://en.wikipedia.org/wiki/Physical_design_(electronics)
 7. https://chipedge.com/what-is-clock-tree-synthesis
+## Mentor
+Neha Sayyad
+## Mentis
+Kandula SaiCharan
+Mohammed Moin Abubakar
 
