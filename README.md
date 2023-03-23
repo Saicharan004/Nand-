@@ -1,14 +1,9 @@
 ## ABSTRACT
-The Serial Peripheral Interface (SPI) is a synchronous serial communication interface
-specification used for short-distance communication, primarily in embedded systems.The
-Serial-Peripheral Interface (SPI) protocol is one of the important bus protocols for connecting
-with peripheral devices from microprocessors. The complexity of the circuits has arised with the
-enormous advancement of IC technology. This paper represents a 3-wire SPI protocol (48-bit
-data) chip design for application-specific integrated circuit (ASIC) and its implementation with a
-constraint of clock frequency less than 1MHz. To accomplish compact, stable and reliable data
-transmission, the SPI is designed with Verilog HDL language and synthesized using the Genus
-tool in Cadence virtuoso software.
+
+The Serial Peripheral Interface (SPI) is a synchronous serial communication interface specification used for short-distance communication, primarily in embedded systems.The Serial-Peripheral Interface (SPI) protocol is one of the important bus protocols for connecting with peripheral devices from microprocessors. The complexity of the circuits has arised with the enormous advancement of IC technology. This paper represents a 3-wire SPI protocol (48-bit data) chip design for application-specific integrated circuit (ASIC) and its implementation with a constraint of clock frequency less than 1MHz. To accomplish compact, stable and reliable data transmission, the SPI is designed with Verilog HDL language and synthesized using the Genus tool in Cadence virtuoso software.
+
 ## Introduction
+
 Communication protocols are a formal definition of the formats and regulations of digital
 messages. They are required to exchange messages within or between computing systems, and
 they are significant in telecommunication systems and other systems Communications protocols
@@ -18,6 +13,8 @@ communications. Computer networks cannot exist without them. We have presented t
 protocols such as Serial Peripheral Interface (SPI), Inter-Integrated Circuit (I2C), and Universal
 Asynchronous Receiver/Transmitter (UART) driven communication. Later, SPI implementation
 was presented.
+
+
 ## Serial vs parallel communication:
 Electronic devices communicate with one another by transferring bits of data across wires that
 are physically connected between them. Quick voltage changes are used to move bits from one
@@ -27,6 +24,8 @@ parallel or serial form. In parallel communication, the bits of data are sent al
 each through a separate wire.
 ![WhatsApp Image 2023-03-21 at 18 18 39](https://user-images.githubusercontent.com/127031157/226610823-207ccd8c-6da0-4c91-9477-f1ae20ff42fe.jpg)
 ![WhatsApp Image 2023-03-21 at 18 19 54](https://user-images.githubusercontent.com/127031157/226611091-55edd9c4-bcb0-4754-9434-0dc02a310541.jpg)
+
+
 ## Communication protocols
 UART, SPI and I2C are the common hardware interfaces people use in microcontroller
 development.
