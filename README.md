@@ -123,7 +123,7 @@ Counter which keeps the count of the number of bits being transferred in one clo
 MOSI (Master out slave in) has been defined. We started implementing the code of 16- bit data.
 Later, it was extended to 48 bit data transfer.
 Github link for the verilog code and it’s testbench of 48-bit SPI Protocol is attached below:
-https://github.com/kuruba-sailasree/SPI-Protocol-for-48-bit-data/tree/main
+https://github.com/Saicharan004/SPI-Protocol
 ## Functional/gate simulation/verification:
 After specifying the system in verilog, two things can be done: Simulation and Synthesis.
 a) Simulate the system and verify the operation: It is just like running a program written in
