@@ -22,7 +22,11 @@ device to another. In a system operating at 5 V, a 0 bit is communicated as a sh
 and a 1 bit is communicated by a short pulse of 5V. The bits of data can be transmitted either in
 parallel or serial form. In parallel communication, the bits of data are sent all at the same time,
 each through a separate wire.
+
+
 ![WhatsApp Image 2023-03-21 at 18 18 39](https://user-images.githubusercontent.com/127031157/226610823-207ccd8c-6da0-4c91-9477-f1ae20ff42fe.jpg)
+
+
 ![WhatsApp Image 2023-03-21 at 18 19 54](https://user-images.githubusercontent.com/127031157/226611091-55edd9c4-bcb0-4754-9434-0dc02a310541.jpg)
 
 
@@ -43,7 +47,10 @@ MOSI (Master Output/Slave Input) – Line for the master to send data to the sla
 MISO (Master Input/Slave Output) – Line for the slave to send data to the master.
 SCLK (Clock) – Line for the digital clock signal.
 SS/CS (Slave Select/Chip Select) – Line for the master to select which slave to send data .
+
 ![image](https://user-images.githubusercontent.com/127031157/226615346-83a6b588-ca9d-4214-9442-92711b6d6a3e.png)
+
+
 ## Working of SPI 
 ## The Clock:
 The clock signal synchronizes the output of data bits from the master to the
@@ -63,7 +70,11 @@ SPI can be set up to operate with a single master and a single slave, and it can
 be set up with multiple slaves controlled by a single master. There are two ways to connect
 multiple slaves to the master. If the master has multiple slave select pins, the slaves can be wired
 in parallel like this:
+
+
 ![image](https://user-images.githubusercontent.com/127031157/226616205-3e53264e-6610-4677-b556-f5fe14fb7ec1.png)
+
+
 ● Both SPI master and slave have shift register
 ● When the master wants to send the data to the slave, First it loads the data into its Shift
 Register.
@@ -76,7 +87,11 @@ transfer the data and at the same time receiving the slave data using its intern
 register.
 ● From the SPI master and slave interconnection diagram on the right side You can see that
 the SPI peripheral use the shift register to transfer and receive the data.
+
+
 ![image](https://user-images.githubusercontent.com/127031157/226616698-24df8c7d-dd9f-4112-b455-95a2a9ca8159.png)
+
+
 ● For example the master want to transfer Ob10001101(0x8E) to the slave and at the same
 slave device also want to transfer the Ob00110010(0x32) data to the master.
 ● By activating the CS(chip select) pin on the slave device, now the slave is ready to
@@ -86,7 +101,11 @@ receive the data.
 memory, and clocks out its MSB via MISO.
 ● Continuously using the same principle for each bit, the complete data transfer between
 master and slave will be done in 8 clock cycle.
+
+
 ![image](https://user-images.githubusercontent.com/127031157/226617294-37bc110e-617e-4cc6-ad8f-91894c38df0b.png)
+
+
 ## Pros and Cons
 ## Advantages:
 ● No start and stop bits, so the data can be streamed continuously without interruption.
@@ -103,9 +122,17 @@ master and slave will be done in 8 clock cycle.
 Clock polarity (CPOL) and clock phase (CPHA) are the main parameters that define a clock
 format to be used by the SPI bus. Depending on CPOL parameters, SPI clock may be inverted or
 non-inverted. CPHA parameter is used to shift the sampling phase.
+
+
 ![WhatsApp Image 2023-03-21 at 18 58 12](https://user-images.githubusercontent.com/127031157/226620567-397fe41a-e54e-4b64-bcd2-598393602297.jpg)
+
+
 ## Steps in Digital IC design
+
+
 ![image](https://user-images.githubusercontent.com/127031157/226621036-5c7d1a8f-944d-409c-933d-0c7939cfaf40.png)
+
+
 Digital IC design is a procedural process that involves converting specifications and features into
 digital blocks and then further into logic circuits. Many of the constraints associated with digital
 IC design come from the foundry process and technological limitations.
@@ -132,8 +159,14 @@ b) Use a synthesis tool to map it to hardware
 In our project we have used EDA playground to verify the code first, later NCsim in Cadence has
 been used. From the pictures shown below both the results are the same.
 ## Results:
+
+
 ![image](https://user-images.githubusercontent.com/127031157/226622227-a4beaaee-cab2-4560-a727-aca8930c914a.png)
+
+
 ![WhatsApp Image 2023-03-21 at 19 06 15](https://user-images.githubusercontent.com/127031157/226622845-8e169bfd-6bc1-49b7-bc5f-d583ff406bcf.jpg)
+
+
 ## Synthesis using Genus tool:
 ● We can create the best balance of power, performance, and area (PPA).
 ● Cadence synthesis provides an integrated flow that makes us understand the
@@ -165,8 +198,14 @@ We use library files such as slow_vdd1v0_basicCells.lib and fast_vdd1v0_basicCel
 DFT means testing synthesized netlist with testbench. It is not considered to be an important step
 in designing.
 ## Results after synthesis:
+
+
 ![WhatsApp Image 2023-03-21 at 19 12 43](https://user-images.githubusercontent.com/127031157/226624516-56b83382-69c0-4c9a-9e90-e9fd9b88a054.jpg)
+
+
 ![WhatsApp Image 2023-03-21 at 19 14 08](https://user-images.githubusercontent.com/127031157/226624908-a9943083-66a9-468b-9147-3966c2b99024.jpg)
+
+
 ## Timing, Power, Qor reports:
 ## Static Timing Analysis Report:
 Generated by: Genus(TM) Synthesis Solution 20.12-s150_1
@@ -211,7 +250,11 @@ Positive slack in case of setup means design is working at the specified frequen
 some margin as well i.e. No Setup Violation.
 We can’t exactly predict whether the constraint has been met or not just from the timing reports
 after synthesis. Physical design has to be implemented to know the right predictions
+
+
 ![WhatsApp Image 2023-03-21 at 19 21 53](https://user-images.githubusercontent.com/127031157/226627054-3cf1881b-89f8-440a-8628-8c3e588ef705.jpg)
+
+
 In the report shown above, these are probably the maximum path delays i.e. worst case delays.
 Timing Arc: Static timing analysis works on the concept of timing paths. Each path starts from
 either primary input or a register and ends at a primary output or a register. In-between, the path
@@ -326,7 +369,11 @@ determines the IO structure and aspect ratio of the design.
 The floorplan aspect ratio was set in order to fit write and read buses at the bottom of the IP. This
 aspect also aims to facilitate the addition of PAD cells, considering that the top side groups every
 output pin.
+
+
 ![WhatsApp Image 2023-03-21 at 19 34 02](https://user-images.githubusercontent.com/127031157/226630820-b00e30d3-ffde-4b6c-92bb-0971be00d09e.jpg)
+
+
 Partitioning is a process of dividing the chip into small blocks. This is done mainly to separate
 different functional blocks and also to make placement and routing easier.
 ## Placement:
@@ -334,7 +381,11 @@ Placement is the process of finding a suitable physical location for each cell i
 Tool only determines the location of each standard cell on the die.
 Placement optimizes the design in addition to placing the standard cell that is present in the
 synthesized netlist.
+
+
 ![WhatsApp Image 2023-03-21 at 19 41 59](https://user-images.githubusercontent.com/127031157/226633729-336e540c-b767-4640-af8f-85df95e5fb50.jpg)
+
+
 ## Clock Tree Synthesis
 Clock Tree Synthesis is a technique for distributing the clock equally among all sequential parts
 of a VLSI design. The purpose of Clock Tree Synthesis is to reduce skew and delay. Clock Tree
@@ -345,7 +396,11 @@ buffers/inverters along the clock routes of an ASIC design.
 Routing is the stage after CTS where the interconnections are made by determining the precise
 paths for each nets. This includes the interconnection of the standard cells, the macro pins, the
 pins of the block boundary or the pads of the chip boundary.
+
+
 ![WhatsApp Image 2023-03-21 at 19 46 10](https://user-images.githubusercontent.com/127031157/226634341-f880e4bd-ff55-4f24-9fc5-e9762836c0cb.jpg)
+
+
 ## Conclusion:
 A robust and simple SPI interface design was described in this paper. To accomplish compact,
 stable and reliable data transmission, the SPI is designed with Verilog HDL language and
@@ -363,7 +418,7 @@ and physical synthesis.
 7. https://chipedge.com/what-is-clock-tree-synthesis
 ## Mentor
 Neha Sayyad
-## Mentis
+## Mentees
 Kandula SaiCharan
 Mohammed Moin Abubakar
 Venkatesh Naik Ajmeera
