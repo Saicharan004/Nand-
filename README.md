@@ -373,7 +373,7 @@ gives the SubTotal Power. We can also express it in percentile form.
 Usually, if the total power is in milli or higher watts the power consumption is termed to be
 more. We find that the total power summed to 4.52 micro watts which is low. Hence we can say
 that the model is better and there’s no contradiction.
-#### Black Box Testing: 
+<u> #### Black Box Testing: <u>
 It is a testing technique where no knowledge of the internal functionality and
 structure of the system is available. This testing technique treats the system as a black box or
 closed box. The tester only knows the formal inputs and expected outputs, but does not know
