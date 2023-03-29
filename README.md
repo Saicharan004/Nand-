@@ -467,7 +467,7 @@ and physical synthesis.
 ## Mentor
 1. Neha Sayyad
 ## Mentees
-2. Kandula SaiCharan
+2. Kandula Sai Charan
 
 3. Mohammed Moin Abubakar
 
