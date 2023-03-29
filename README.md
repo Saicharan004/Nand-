@@ -80,48 +80,72 @@ in parallel like this:
 
 
 ● Both SPI master and slave have shift register
+
 ● When the master wants to send the data to the slave, First it loads the data into its Shift
 Register.
+
 ● The master then selects the destination. This is done by selecting the SS or CS line
 associated with that slave.
+
 ● The serial Clock line is then enabled and one bit of the data is shifted on the MOSI line
 with each clock pulse.
+
 ● Since the SPI protocol uses full duplex synchronous serial data transfer method, it could
 transfer the data and at the same time receiving the slave data using its internal shift
 register.
+
 ● From the SPI master and slave interconnection diagram on the right side You can see that
 the SPI peripheral use the shift register to transfer and receive the data.
+
 
 
 ![image](https://user-images.githubusercontent.com/127031157/226616698-24df8c7d-dd9f-4112-b455-95a2a9ca8159.png)
 
 
+
 ● For example the master want to transfer Ob10001101(0x8E) to the slave and at the same
 slave device also want to transfer the Ob00110010(0x32) data to the master.
+
 ● By activating the CS(chip select) pin on the slave device, now the slave is ready to
 receive the data.
+
 ● Prior to a data exchange, the master and slave load their internal shift registers with memory data. Upon a clock signal, the master clocks out its shift register MSB first via the MOSI line.
+
 ● At the same time the slave reads the first bit from the master at MOSI, stores it into
 memory, and clocks out its MSB via MISO.
+
 ● Continuously using the same principle for each bit, the complete data transfer between
 master and slave will be done in 8 clock cycle.
+
 
 
 ![image](https://user-images.githubusercontent.com/127031157/226617294-37bc110e-617e-4cc6-ad8f-91894c38df0b.png)
 
 
-## Pros and Cons
-## Advantages:
+
+## Pros and Cons:
+
+### Advantages:
 ● No start and stop bits, so the data can be streamed continuously without interruption.
+
 ● No complicated slave addressing system like I2C.
+
 ● Higher data transfer rate (almost twice as fast) and consumes less power than I2C.
+
 ● Separate MISO and MOSI lines, so data can be sent and received at the same time.
+
 ● It supports full duplex communication.
-## Disadvantages:
+
+### Disadvantages:
+
 ● Uses four wires (I2C and UARTs use two).
+
 ● No acknowledgement that the data has been successfully received (I2C has this).
+
 ● No form of error checking like the parity bit in UART.
+
 ● Only allows for a single master.
+
 ## Modes of SPI:
 Clock polarity (CPOL) and clock phase (CPHA) are the main parameters that define a clock
 format to be used by the SPI bus. Depending on CPOL parameters, SPI clock may be inverted or
