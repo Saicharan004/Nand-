@@ -281,7 +281,8 @@ The report gives information about startpoint and endpoint .
 #### Startpoint: 
 state_reg[1] got triggered by clock CK.
 
-#### Endpoint: MOSI_reg[0] got triggered by D.
+#### Endpoint: 
+MOSI_reg[0] got triggered by D.
 
 #### Source latency: 
 It is the delay from the clock source to clock definition pin in the design.
@@ -373,7 +374,7 @@ gives the SubTotal Power. We can also express it in percentile form.
 Usually, if the total power is in milli or higher watts the power consumption is termed to be
 more. We find that the total power summed to 4.52 micro watts which is low. Hence we can say
 that the model is better and there’s no contradiction.
-<u> #### Black Box Testing: <u>
+#### Black Box Testing: 
 It is a testing technique where no knowledge of the internal functionality and
 structure of the system is available. This testing technique treats the system as a black box or
 closed box. The tester only knows the formal inputs and expected outputs, but does not know
@@ -422,14 +423,14 @@ Genus peak memory usage 1318.92
 Innovus peak memory usage no_value
 ```
 
-Leaf Instance Count :
+#### Leaf Instance Count:
 Leaf cells are cells that can't be broken down any further. Like AND gates and INV gates. These
 take up real area on the chip die
-Sequential Instance count :
+#### Sequential Instance count:
 A summation of the sequential cells in the design: Flops, latches, etc.
-Combinational instance count:
+#### Combinational instance count:
 The non-sequential cells: NANDs, BUFs, etc.
-Hierarchical instance count :
+#### Hierarchical instance count :
 Hierarchical instances aren't physical cells but named logical partitions of the design.
 ## Net Area:
 The net area is probably a figure relating to the amount of routing resources used. It is defined in
