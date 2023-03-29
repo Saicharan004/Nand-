@@ -273,26 +273,25 @@ Launch Clock :- 0
 Data Path :- 1348
 Slack := 8524
 ```
-Path1: It tells whether the path has met or violated the timing.
-
+####Path1: 
+It tells whether the path has met or violated the timing.
 In the SPI Protocol case the path has met the timing constraint i.e. The check is passed
 The report gives information about startpoint and endpoint .
 
-Startpoint : state_reg[1] got triggered by clock CK.
+####Startpoint : state_reg[1] got triggered by clock CK.
 
-Endpoint: MOSI_reg[0] got triggered by D.
+####Endpoint: MOSI_reg[0] got triggered by D.
 
-Source latency : It is the delay from the clock source to clock definition pin in the design.
-Network latency : It is the delay from the clock definition point to the register clock pin.
-
+####Source latency : It is the delay from the clock source to clock definition pin in the design.
+####Network latency : It is the delay from the clock definition point to the register clock pin.
 From the Timing report Src latency and Net latency for both launch and capture flop is 0 which
 means that there are no delay elements in the path.
 
-Data Arrival time: The time required for data to travel through the data path.
+####Data Arrival time: The time required for data to travel through the data path.
 
-Required time: The time taken for the clock to traverse through the clock path.
+####Required time: The time taken for the clock to traverse through the clock path.
 
-Slack: It is the difference between achieved time and the desired time for a timing path. For a
+####Slack: It is the difference between achieved time and the desired time for a timing path. For a
 timing path slack determines if the design is working at the specified speed or frequency.
 
 From Spi protocol report, Slack is 8524 (slack=Required time - Data path time = 9872-1348 =
@@ -308,20 +307,20 @@ after synthesis. Physical design has to be implemented to know the right predict
 
 In the report shown above, these are probably the maximum path delays i.e. worst case delays.
 
-Timing Arc: Static timing analysis works on the concept of timing paths. Each path starts from
+####Timing Arc: Static timing analysis works on the concept of timing paths. Each path starts from
 either primary input or a register and ends at a primary output or a register. In-between, the path
 traverses through what are known as timing arcs.
 
-Fan-out: Fan-out is the number of equivalent inputs that can be safely driven by one output.In
+####Fan-out: Fan-out is the number of equivalent inputs that can be safely driven by one output.In
 the timing analysis report fanout has a minimum value of 30. So all the Timing points are
 capable of handling inputs.
 
-Cell: It’s like a gate
+####Cell: It’s like a gate
 
-Arrival: It's the cumulative delay of each cell.
+####Arrival: It's the cumulative delay of each cell.
 
-Trans delay: It is the delay between 2 transactions in SPI communication.
-Trans delay should be less so that time is not wasted in propagating.
+####Trans delay: It is the delay between 2 transactions in SPI communication.
+####Trans delay should be less so that time is not wasted in propagating.
 
 ## Power Analysis:
 
@@ -376,6 +375,7 @@ It generally covers improvement and consistency in the performance of integrated
 covers logical combinational blocks (logic gates) to measure the performance of backend eda
 tools.
 
+```
 Timing
 Clock Period
 clk 10000.0
@@ -409,6 +409,8 @@ Runtime 370.368029 seconds
 Elapsed Runtime 29041 seconds
 Genus peak memory usage 1318.92
 Innovus peak memory usage no_value
+```
+
 Leaf Instance Count :
 Leaf cells are cells that can't be broken down any further. Like AND gates and INV gates. These
 take up real area on the chip die
