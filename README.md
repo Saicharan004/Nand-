@@ -28,8 +28,6 @@ each through a separate wire.
 
 
 
-
-
 ![WhatsApp Image 2023-03-21 at 18 19 54](https://user-images.githubusercontent.com/127031157/226611091-55edd9c4-bcb0-4754-9434-0dc02a310541.jpg)
 
 
