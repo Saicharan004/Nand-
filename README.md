@@ -1,8 +1,8 @@
-## ABSTRACT
+# Design and Implementation of 48 bit SPI Protocol with clock frequency less than 1 MHz
 
 The Serial Peripheral Interface (SPI) is a synchronous serial communication interface specification used for short-distance communication, primarily in embedded systems.The Serial-Peripheral Interface (SPI) protocol is one of the important bus protocols for connecting with peripheral devices from microprocessors. The complexity of the circuits has arised with the enormous advancement of IC technology. This paper represents a 3-wire SPI protocol (48-bit data) chip design for application-specific integrated circuit (ASIC) and its implementation with a constraint of clock frequency less than 1MHz. To accomplish compact, stable and reliable data transmission, the SPI is designed with Verilog HDL language and synthesized using the Genus tool in Cadence virtuoso software.
 
-### Introduction
+## Introduction:
 
 Communication protocols are a formal definition of the formats and regulations of digital
 messages. They are required to exchange messages within or between computing systems, and
@@ -15,7 +15,7 @@ Asynchronous Receiver/Transmitter (UART) driven communication. Later, SPI implem
 was presented.
 
 
-### Serial vs parallel communication:
+## Serial vs parallel communication:
 Electronic devices communicate with one another by transferring bits of data across wires that
 are physically connected between them. Quick voltage changes are used to move bits from one
 device to another. In a system operating at 5 V, a 0 bit is communicated as a short pulse of 0 V,
@@ -32,7 +32,7 @@ each through a separate wire.
 
 
 
-### Communication protocols
+## Communication protocols
 UART, SPI and I2C are the common hardware interfaces people use in microcontroller
 development.
 #### UART: 
@@ -53,7 +53,7 @@ SS/CS (Slave Select/Chip Select) – Line for the master to select which slave t
 ![image](https://user-images.githubusercontent.com/127031157/226615346-83a6b588-ca9d-4214-9442-92711b6d6a3e.png)
 
 
-### Working of SPI 
+## Working of SPI 
 #### The Clock:
 The clock signal synchronizes the output of data bits from the master to the
 sampling of bits by the slave. One bit of data is transferred in each clock cycle, so the speed of
