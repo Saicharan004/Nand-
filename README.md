@@ -2,7 +2,7 @@
 
 The Serial Peripheral Interface (SPI) is a synchronous serial communication interface specification used for short-distance communication, primarily in embedded systems.The Serial-Peripheral Interface (SPI) protocol is one of the important bus protocols for connecting with peripheral devices from microprocessors. The complexity of the circuits has arised with the enormous advancement of IC technology. This paper represents a 3-wire SPI protocol (48-bit data) chip design for application-specific integrated circuit (ASIC) and its implementation with a constraint of clock frequency less than 1MHz. To accomplish compact, stable and reliable data transmission, the SPI is designed with Verilog HDL language and synthesized using the Genus tool in Cadence virtuoso software.
 
-## Introduction
+### Introduction
 
 Communication protocols are a formal definition of the formats and regulations of digital
 messages. They are required to exchange messages within or between computing systems, and
@@ -15,7 +15,7 @@ Asynchronous Receiver/Transmitter (UART) driven communication. Later, SPI implem
 was presented.
 
 
-## Serial vs parallel communication:
+### Serial vs parallel communication:
 Electronic devices communicate with one another by transferring bits of data across wires that
 are physically connected between them. Quick voltage changes are used to move bits from one
 device to another. In a system operating at 5 V, a 0 bit is communicated as a short pulse of 0 V,
@@ -27,18 +27,20 @@ each through a separate wire.
 ![WhatsApp Image 2023-03-21 at 18 18 39](https://user-images.githubusercontent.com/127031157/226610823-207ccd8c-6da0-4c91-9477-f1ae20ff42fe.jpg)
 
 
+
 ![WhatsApp Image 2023-03-21 at 18 19 54](https://user-images.githubusercontent.com/127031157/226611091-55edd9c4-bcb0-4754-9434-0dc02a310541.jpg)
 
 
-## Communication protocols
+
+### Communication protocols
 UART, SPI and I2C are the common hardware interfaces people use in microcontroller
 development.
-## UART: 
+#### UART: 
 UART (Universal Asynchronous Transmitter Receiver), this is the most common
 protocol used for full-duplex serial communication. It is a single LSI (large-scale integration)
 chip designed to perform asynchronous communication. This device sends and receives data
 from one system to another system.● Both SPI master and slave have shift register
-## I2C:
+#### I2C:
 The inter-integrated circuit or I2C Protocol is a way of serial communication between
 different devices to exchange their data with each other. It is a half-duplex bi-directional
 two-wire bus system for transmitting and receiving data between masters (M) and slaves (S).
@@ -51,21 +53,23 @@ SS/CS (Slave Select/Chip Select) – Line for the master to select which slave t
 ![image](https://user-images.githubusercontent.com/127031157/226615346-83a6b588-ca9d-4214-9442-92711b6d6a3e.png)
 
 
-## Working of SPI 
-## The Clock:
+### Working of SPI 
+#### The Clock:
 The clock signal synchronizes the output of data bits from the master to the
 sampling of bits by the slave. One bit of data is transferred in each clock cycle, so the speed of
 data transfer is determined by the frequency of the clock signal. SPI communication is always
 initiated by the master since the master configures and generates the clock signal.
+
 The clock signal in SPI can be modified using the properties of clock polarity and clock phase.
 These two properties work together to define when the bits are output and when they are
 sampled. Clock polarity can be set by the master to allow for bits to be output and sampled on
 either the rising or falling edge of the clock cycle. Clock phase can be set for output and
 sampling to occur on either the first edge or second edge of the clock cycle, regardless of
 whether it is rising or falling.
-## Slave Select: The master can choose which slave it wants to talk to by setting the chip select line
-(CS)
-## Multiple Slaves:
+
+#### Slave Select
+The master can choose which slave it wants to talk to by setting the chip select line(CS)
+#### Multiple Slaves
 SPI can be set up to operate with a single master and a single slave, and it can
 be set up with multiple slaves controlled by a single master. There are two ways to connect
 multiple slaves to the master. If the master has multiple slave select pins, the slaves can be wired
