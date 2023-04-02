@@ -503,5 +503,3 @@ and physical synthesis.
 2. Kandula Sai Charan
 
 3. Mohammed Moin Abubakar
-
-4. Venkatesh Naik Ajmeera
